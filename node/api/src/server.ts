@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import express, { response } from 'express';
 
 const app = express();
@@ -18,5 +19,16 @@ app.post('/', (req, res) => {
   // recebe os dados para salvar
   return res.json({ message: 'Os dados foram salvos com sucesso! ' });
 });
+=======
+import 'reflect-metadata';
+import express, { response } from 'express';
+import './database';
+import { router } from './routes';
+
+const app = express();
+
+app.use(express.json());
+app.use(router);
+>>>>>>> node
 
 app.listen(3000, () => console.log('Server is up!'));
